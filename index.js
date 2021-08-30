@@ -43,24 +43,24 @@ class CustomCrop extends Component {
     this.animatedCoordinates = {
       topLeft: new Animated.ValueXY(
         isEmpty(rectangleCoordinates) ?
-          { x: 100, y: 100 }
+          { x: 50, y: 50 }
           : this.imageCoordinatesToViewCoordinates({ ...topLeft })
       ),
       topRight: new Animated.ValueXY(
         isEmpty(rectangleCoordinates) ?
-          { x: this.state.viewWidth - 100, y: 100 }
+          { x: this.state.viewWidth - 50, y: 50 }
           : this.imageCoordinatesToViewCoordinates({ ...topRight })
       ),
       bottomLeft: new Animated.ValueXY(
         isEmpty(rectangleCoordinates) ?
-          { x: 100, y: this.state.viewHeight - 100 }
+          { x: 50, y: this.state.viewHeight - 50 }
           : this.imageCoordinatesToViewCoordinates({ ...bottomLeft })
       ),
       bottomRight: new Animated.ValueXY(
         isEmpty(rectangleCoordinates) ?
           {
-            x: this.state.viewWidth - 100,
-            y: this.state.viewHeight - 100,
+            x: this.state.viewWidth - 50,
+            y: this.state.viewHeight - 50,
           }
           : this.imageCoordinatesToViewCoordinates({ ...bottomRight })
       )
